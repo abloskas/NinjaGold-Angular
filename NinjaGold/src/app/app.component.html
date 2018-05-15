@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ninja Gold</title>
+</head>
+<body>
+  <h1>Welcome to {{title}}!</h1>
+
+  <h3 style="border: 1px solid black;">Total Gold: {{gold}}</h3>
+
+  <div class="farm" style="border: 1px solid black;">
+    <h4>Farm</h4>
+    <p>Earns 2-5 Gold</p>
+    <button (click)="onClick('farm')">GOLD ME</button>
+  </div>
+  <div class="cave" style="border: 1px solid black;">
+    <h4>Cave</h4>
+    <p>Earns 5-10 Gold</p>
+    <button (click)="onClick('cave')">GOLD ME</button>
+  </div>
+  <div class="house" style="border: 1px solid black;">
+    <h4>Farm</h4>
+    <p>Earns 7-15 Gold</p>
+    <button (click)="onClick('house')">GOLD ME</button>
+  </div>
+
+  <div class="casino" style="border: 1px solid black;">
+    <h4>Farm</h4>
+    <p>Earns or loses up to 100 Gold</p>
+    <button (click)="onClick('casino')">GOLD ME</button>
+  </div>
+
+  <div class="farm" style="border: 1px solid black;">
+    <p *ngFor="let activity of log">Activity Log: {{activity}} </p>
+    </div>
+</body>
+</html>
